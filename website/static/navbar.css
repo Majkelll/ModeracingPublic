@@ -1,0 +1,121 @@
+:root {
+  --main-color: rgba(125, 122, 117, 0.7);
+  --text-color: #fdf8ef;
+  --main-height: 70px;
+  --text-color-extra: #ffe7bb;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+* {
+  outline: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav-conteiner {
+  height: 58px;
+  display: flex;
+  background: var(--main-color);
+  backdrop-filter: blur(2px);
+  justify-content: space-between;
+  color: var(--text-color);
+}
+
+.nav-item {
+  margin: 5px;
+  padding: 10px;
+}
+
+.nav-item-list {
+  display: flex;
+}
+
+.btn-nav {
+  border: none;
+  background: transparent;
+  color: var(--text-color);
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.nav-item-list a {
+  padding: 0px 10px;
+}
+
+.nav-item span {
+  font-size: 1.3rem;
+}
+
+.btn-special {
+  color: var(--text-color-extra);
+}
+
+.flashes {
+  width: 500px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  top: 60px;
+  left: calc(50vw - 250px);
+  animation: fading 5s;
+  animation-fill-mode: forwards;
+}
+
+.flashes li {
+  background: #387838;
+  list-style-type: none;
+  text-align: center;
+  padding: 20px 50px;
+  font-size: 2rem;
+  margin: 20px 0px;
+  border-radius: 30px;
+}
+
+.flashes .error {
+  background: red;
+}
+
+@keyframes fading {
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.account-settings-conteiner {
+  position: absolute;
+  top: 58px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background: var(--main-color);
+  backdrop-filter: blur(2px);
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+  display: none;
+}
+
+.account-settings-conteiner a {
+  font-size: 1.3rem;
+  background: none;
+  border: none;
+  padding: 10px 0;
+  color: var(--text-color);
+  text-align: center;
+  text-decoration: none;
+}
+
+#btn-account:hover {
+  color: red;
+}

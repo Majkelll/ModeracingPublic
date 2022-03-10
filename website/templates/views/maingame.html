@@ -1,0 +1,24 @@
+{% extends "./base/navbar.html" %}
+
+{% block title%}
+MainGame
+{% endblock %}
+
+{% block extracss %}
+<link rel="stylesheet" href="../../static/maingame.css" />
+{% endblock %}
+{% block extrascript %}
+<script src="../../static/maingame.js"></script>
+{% endblock%}
+
+{% block content %}
+<div class="cursor"></div>
+<div class="game-container">
+  <div class="background">
+    <div class="text" id='top'>
+    </div>
+    <div class="text" id='bot'>
+    </div>
+  </div>
+</div>
+{% endblock%}

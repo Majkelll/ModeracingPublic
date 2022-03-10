@@ -1,0 +1,115 @@
+:root {
+  --login-trans: transform 1s ease-in-out;
+}
+
+.container-main {
+  background: url("./assets/login-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container-blur {
+  position: absolute;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+  backdrop-filter: blur(5px);
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+
+.form-container {
+  background: rgba(245, 245, 245, 0.8);
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-container form h1 {
+  font-size: 2rem;
+  padding: 20px;
+}
+
+.form-container form span {
+  color: rgb(136, 107, 88);
+  margin-bottom: 5px;
+}
+
+.form-container form input {
+  padding: 10px 30px;
+  margin-top: 5px;
+  border: none;
+  background: rgba(245, 245, 245, 0.9);
+}
+
+.form-container form a {
+  color: rgb(136, 107, 88);
+  margin-top: 5px;
+  text-decoration-color: rgb(167, 151, 141);
+}
+
+.form-container form button {
+  background: rgba(138, 98, 74);
+  padding: 10px 30px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 30px;
+}
+
+.overlay-container {
+  position: absolute;
+  background: rgba(138, 98, 74, 0.8);
+  height: 100%;
+  width: 50%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--login-trans);
+}
+
+.form-create-acc {
+  transition: var(--login-trans);
+  transform: translateX(-100%);
+}
+
+.form-sign-in {
+  transition: var(--login-trans);
+}
+
+/* overlay buttons set up */
+#signIn {
+  display: none;
+}
+
+.overlay-container button {
+  border: none;
+  font-size: 1.7rem;
+  padding: 10px 30px;
+  border-radius: 30px;
+}
+
+.overlay-container button:active {
+  transform: scale(0.95);
+}

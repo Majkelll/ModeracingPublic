@@ -1,0 +1,25 @@
+body {
+  min-height: 100vh;
+  background: url("./assets/home-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.blur {
+  position: absolute;
+  left: calc(50% - 25vw);
+  top: calc(50% - 12.5vh);
+  height: 25vh;
+  width: 50vw;
+  border-radius: 10vh;
+  background: rgba(196, 196, 196, 0.5);
+  backdrop-filter: blur(2px);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blur a {
+  color: #454545;
+  text-decoration: none;
+  font-size: 10rem;
+}

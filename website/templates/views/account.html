@@ -1,0 +1,41 @@
+{% extends "./base/navbar.html" %}
+
+{% block title%}
+Account
+{% endblock %}
+
+{% block extracss %}
+
+{% endblock %}
+{% block extrascript %}
+
+{% endblock%}
+
+{% block content %}
+<div>
+  Aktualny nick: <span>{{ user.username }}</span>
+</div>
+<div>
+  Aktualne haslo: <span>{{ user.password }}</span>
+</div>
+<div>
+  <div class="">
+    <form method="POST">
+      <h1>Change Username</h1>
+      <input class='input' type="text" id="nick" name="nick" placeholder="New username" />
+      <button type=" submit">Change Username</button>
+      <input type="hidden" name="data" value="changeUsername" />
+    </form>
+  </div>
+
+  <div class="">
+    <form method="POST">
+      <h1>Change Password</h1>
+      <input type="password" placeholder="Password" name="password" />
+      <input type="password" placeholder="Password" name="password2" />
+      <button type=" submit">Change Password</button>
+      <input type="hidden" name="data" value="changePassword" />
+    </form>
+  </div>
+</div>
+{% endblock%}

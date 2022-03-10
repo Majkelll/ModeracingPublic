@@ -1,0 +1,64 @@
+body {
+  min-height: 100vh;
+  background: url("./assets/coffe-background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.game-container {
+  height: 50vh;
+  width: 80vw;
+  margin: 100px auto;
+  background: rgba(178, 178, 178, 0.5);
+  backdrop-filter: blur(3px);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.text {
+  margin: 30px 0 15px 0;
+  width: calc(80vw - 60px);
+  border-radius: 30px;
+  background: rgba(111, 111, 111, 0.7);
+  padding: 15px;
+  flex: 1 1 auto;
+  flex-direction: column;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+
+#top {
+  height: calc(70% - 45px);
+}
+
+#bot {
+  margin: 0px;
+  height: calc(30% - 30px);
+}
+
+.cursor {
+  position: absolute;
+  width: 2px;
+  height: 1.5rem;
+  z-index: 1;
+  animation: wink 0.7s infinite;
+  transform: translateY(5px);
+  transition: all 0.1s linear;
+  display: none;
+}
+
+@keyframes wink {
+  0% {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  50% {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title%}{% endblock %}</title>
+  <link rel="stylesheet" href="../../static/navbar.css" />
+  {% block extracss %}{% endblock %}
+</head>
+
+<body>
+  <div class="nav-conteiner">
+    <div class="nav-item">
+      <button class="btn-nav btn-special">Mode</button>
+      <span>recing</span>
+    </div>
+    <div class="nav-item nav-item-list">
+      <a href="/home" class="btn-nav">Home</a>
+      <a href="/lessons" class="btn-nav">Lessons</a>
+      <a href="/games" class="btn-nav">Games</a>
+      <a href="/special" class="btn-nav">Special</a>
+    </div>
+    <div class="nav-item">
+      {% if user.username %}
+      <button class="btn-nav btn-special" id="btn-account">
+        {{user.username}}
+      </button>
+      {% else %}
+      <a href="/login" class="btn-nav btn-special">
+        Login
+        {% endif %}
+      </a>
+    </div>
+  </div>
+  {% block content %} {% endblock%}
+
+  <!-- flash message hendler -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  <ul class=flashes>
+    {% for category,message in messages %}
+    <li class={{ category }}>{{ message }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endwith %}
+
+  {% block body %}{% endblock %}
+
+  <!-- Account button -->
+  <div class="account-settings-conteiner">
+    <a href="/account">Account</a>
+    <a href="/settings">Settings</a>
+    <a href="/logout">Logout</a>
+  </div>
+  <script src="../../static/navbar.js"></script>
+  {% block extrascript %} {% endblock%}
+</body>
+
+</html>
